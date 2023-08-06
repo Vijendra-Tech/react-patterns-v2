@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export const withUser = (Compenenet, userId) => {
+export const withUser = (Compenent, userId) => {
   return (props) => {
     const [userName, setUserName] = useState('');
 
@@ -10,6 +10,6 @@ export const withUser = (Compenenet, userId) => {
       })();
     }, []);
 
-    return <Compenenet {...props} user={userName} />;
+    return <Compenent {...props} user={userName} />;
   };
 };
